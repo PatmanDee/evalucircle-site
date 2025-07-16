@@ -1,0 +1,192 @@
+{
+  "brand": {
+    "name": "Evalucircle"
+  },
+  "hero": {
+    "headline": "Transform Feedback Into Growth",
+    "subheadline": "The complete evaluation platform that turns insights into action, helping organizations build stronger teams and better outcomes.",
+    "primaryCTA": "Book a Demo",
+    "secondaryCTA": "See Features"
+  },
+  "coreModules": [
+    {
+      "title": "360° Feedback",
+      "description": "Comprehensive multi-source feedback that provides complete visibility into performance and development opportunities.",
+      "icon": "target"
+    },
+    {
+      "title": "Board Evaluation",
+      "description": "Streamlined governance assessments that enhance board effectiveness and strategic decision-making.",
+      "icon": "users"
+    },
+    {
+      "title": "Smart Surveys",
+      "description": "Intelligent survey tools that capture meaningful insights and drive organizational improvement.",
+      "icon": "clipboard"
+    }
+  ],
+  "howItWorks": [
+    {
+      "step": 1,
+      "title": "Design & Deploy",
+      "description": "Create custom evaluation frameworks tailored to your organization's unique needs and goals."
+    },
+    {
+      "step": 2,
+      "title": "Collect & Analyze",
+      "description": "Gather comprehensive feedback through our intuitive platform with real-time analytics and insights."
+    },
+    {
+      "step": 3,
+      "title": "Act & Improve",
+      "description": "Transform insights into actionable development plans that drive measurable organizational growth."
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Evalucircle transformed how we approach performance reviews. The insights are incredible and the platform is so intuitive.",
+      "author": "Sarah Chen",
+      "role": "Chief People Officer",
+      "company": "TechFlow Inc."
+    },
+    {
+      "quote": "Our board evaluations are now streamlined and provide actionable insights that actually improve our governance.",
+      "author": "Michael Rodriguez",
+      "role": "Board Chair",
+      "company": "Growth Ventures"
+    },
+    {
+      "quote": "The 360-degree feedback feature has revolutionized our leadership development program. Highly recommended.",
+      "author": "Emma Thompson",
+      "role": "HR Director",
+      "company": "Innovation Labs"
+    }
+  ],
+  "metrics": [
+    {
+      "value": 50000,
+      "suffix": "+",
+      "label": "Surveys Sent"
+    },
+    {
+      "value": 1200,
+      "suffix": "+",
+      "label": "Organizations"
+    },
+    {
+      "value": 85,
+      "suffix": "%",
+      "label": "Avg NPS Lift"
+    }
+  ],
+  "faq": [
+    {
+      "question": "How quickly can we get started with Evalucircle?",
+      "answer": "Most organizations are up and running within 24-48 hours. Our onboarding team will guide you through the setup process and ensure your first evaluation is launched smoothly."
+    },
+    {
+      "question": "Is the platform suitable for small teams?",
+      "answer": "Evalucircle scales from small teams of 5 people to enterprise organizations with thousands of employees. Our pricing and features adapt to your organization's size and needs."
+    },
+    {
+      "question": "How secure is our data?",
+      "answer": "Security is our top priority. We use enterprise-grade encryption, SOC 2 compliance, and follow strict data privacy regulations including GDPR. Your data is always protected and never shared."
+    },
+    {
+      "question": "Can we customize the evaluation templates?",
+      "answer": "Yes! Our platform offers extensive customization options. You can create custom question sets, evaluation criteria, and reporting formats that align with your organization's specific requirements."
+    },
+    {
+      "question": "What kind of support do you provide?",
+      "answer": "We offer comprehensive support including dedicated customer success managers, 24/7 technical support, training resources, and regular check-ins to ensure you're getting maximum value from the platform."
+    }
+  ],
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the perfect plan for your organization's needs",
+    "plans": [
+      {
+        "name": "Starter",
+        "price": 29,
+        "period": "month",
+        "description": "Perfect for small teams getting started with feedback",
+        "features": [
+          "Up to 50 participants",
+          "Basic 360° feedback",
+          "Email support",
+          "Standard templates",
+          "Basic analytics"
+        ],
+        "popular": false
+      },
+      {
+        "name": "Professional",
+        "price": 79,
+        "period": "month",
+        "description": "Advanced features for growing organizations",
+        "features": [
+          "Up to 500 participants",
+          "Advanced 360° feedback",
+          "Board evaluations",
+          "Custom surveys",
+          "Priority support",
+          "Advanced analytics",
+          "Custom branding"
+        ],
+        "popular": true
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "period": "",
+        "description": "Tailored solutions for large organizations",
+        "features": [
+          "Unlimited participants",
+          "Full platform access",
+          "Dedicated success manager",
+          "Custom integrations",
+          "Advanced security",
+          "White-label options",
+          "24/7 phone support"
+        ],
+        "popular": false
+      }
+    ]
+  },
+  "features": {
+    "title": "Everything You Need",
+    "subtitle": "Comprehensive evaluation tools designed for modern organizations",
+    "items": [
+      {
+        "title": "360° Feedback System",
+        "description": "Comprehensive multi-source feedback collection with intelligent insights",
+        "icon": "target"
+      },
+      {
+        "title": "Board Evaluations",
+        "description": "Streamlined governance assessments for effective board management",
+        "icon": "users"
+      },
+      {
+        "title": "Custom Surveys",
+        "description": "Flexible survey builder with advanced question types and logic",
+        "icon": "clipboard"
+      },
+      {
+        "title": "Real-time Analytics",
+        "description": "Interactive dashboards with actionable insights and trends",
+        "icon": "chart"
+      },
+      {
+        "title": "Automated Reporting",
+        "description": "Professional reports generated automatically with custom branding",
+        "icon": "file"
+      },
+      {
+        "title": "Integration Hub",
+        "description": "Connect with your existing HR tools and workflows seamlessly",
+        "icon": "link"
+      }
+    ]
+  }
+}
