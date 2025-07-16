@@ -1,34 +1,36 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { motion, useInView } from "framer-motion"
-import { useRef, useState } from "react"
-import { AnimatedButton } from "@/components/ui/animated-button"
-import { Mail, Phone, MapPin, Github, Twitter, Linkedin } from "lucide-react"
+import { motion, useInView } from "framer-motion";
+import { useRef, useState } from "react";
+import { AnimatedButton } from "@/components/ui/animated-button";
+import { Mail, Phone, MapPin, GithubIcon, X, LinkedinIcon } from "lucide-react";
 
 export function Contact() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-20%" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-20%" });
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     company: "",
     message: "",
-  })
+  });
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission
-    console.log("Form submitted:", formData)
-  }
+    console.log("Form submitted:", formData);
+  };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData((prev) => ({
       ...prev,
       [e.target.name]: e.target.value,
-    }))
-  }
+    }));
+  };
 
   return (
     <section id="contact" className="py-24 px-6" ref={ref}>
@@ -39,10 +41,12 @@ export function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Get Started Today</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Get Started Today
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Ready to transform your organization's feedback culture? Let's discuss how Evalucircle can help you achieve
-            your goals.
+            Ready to transform your organization's feedback culture? Let's
+            discuss how Evalucircle can help you achieve your goals.
           </p>
         </motion.div>
 
@@ -56,7 +60,10 @@ export function Contact() {
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Full Name
                   </label>
                   <input
@@ -71,7 +78,10 @@ export function Contact() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm font-medium text-gray-300 mb-2"
+                  >
                     Email Address
                   </label>
                   <input
@@ -88,7 +98,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="company" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="company"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Company
                 </label>
                 <input
@@ -103,7 +116,10 @@ export function Contact() {
               </div>
 
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-300 mb-2"
+                >
                   Message
                 </label>
                 <textarea
@@ -132,7 +148,9 @@ export function Contact() {
             className="space-y-8"
           >
             <div className="glass-morphism p-8 rounded-2xl">
-              <h3 className="text-2xl font-bold text-white mb-6">Get in Touch</h3>
+              <h3 className="text-2xl font-bold text-white mb-6">
+                Get in Touch
+              </h3>
 
               <div className="space-y-4">
                 <div className="flex items-center gap-4">
@@ -141,7 +159,7 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="text-white font-medium">Email</div>
-                    <div className="text-gray-300">hello@evalucircle.com</div>
+                    <div className="text-gray-300">admin@evalucircle.com</div>
                   </div>
                 </div>
 
@@ -151,7 +169,7 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="text-white font-medium">Phone</div>
-                    <div className="text-gray-300">+1 (555) 123-4567</div>
+                    <div className="text-gray-300">+263 775332497</div>
                   </div>
                 </div>
 
@@ -161,7 +179,7 @@ export function Contact() {
                   </div>
                   <div>
                     <div className="text-white font-medium">Office</div>
-                    <div className="text-gray-300">San Francisco, CA</div>
+                    <div className="text-gray-300">1 Zimre Way Mandara</div>
                   </div>
                 </div>
               </div>
@@ -174,19 +192,19 @@ export function Contact() {
                   href="#"
                   className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center hover:bg-purple-500/30 transition-colors"
                 >
-                  <Twitter className="w-6 h-6 text-purple-400" />
+                  <X className="w-6 h-6 text-purple-400" />
                 </a>
                 <a
                   href="#"
                   className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center hover:bg-purple-500/30 transition-colors"
                 >
-                  <Linkedin className="w-6 h-6 text-purple-400" />
+                  <LinkedinIcon className="w-6 h-6 text-purple-400" />
                 </a>
                 <a
                   href="#"
                   className="w-12 h-12 rounded-full bg-purple-500/20 flex items-center justify-center hover:bg-purple-500/30 transition-colors"
                 >
-                  <Github className="w-6 h-6 text-purple-400" />
+                  <GithubIcon className="w-6 h-6 text-purple-400" />
                 </a>
               </div>
             </div>
@@ -194,5 +212,5 @@ export function Contact() {
         </div>
       </div>
     </section>
-  )
+  );
 }
