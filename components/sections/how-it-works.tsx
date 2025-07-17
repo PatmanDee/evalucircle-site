@@ -1,15 +1,19 @@
-"use client"
+"use client";
 
-import { motion, useInView } from "framer-motion"
-import { useRef } from "react"
-import content from "@/lib/content.json"
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
+import content from "@/lib/content.json";
 
 export function HowItWorks() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-20%" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-20%" });
 
   return (
-    <section id="how-it-works" className="py-24 px-6 bg-gradient-to-b from-transparent to-purple-900/10" ref={ref}>
+    <section
+      id="how-it-works"
+      className="py-24 px-6 bg-gradient-to-b from-transparent to-purple-900/10"
+      ref={ref}
+    >
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -17,9 +21,15 @@ export function HowItWorks() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">How It Works</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            How It{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent underline decoration-purple-400 underline-offset-4">
+              Works
+            </span>{" "}
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Three simple steps to transform your organization's feedback culture and drive meaningful growth.
+            Three simple steps to transform your organization's feedback culture
+            and drive meaningful growth.
           </p>
         </motion.div>
 
@@ -54,13 +64,17 @@ export function HowItWorks() {
                 )}
               </div>
 
-              <h3 className="text-2xl font-bold text-white mb-4">{step.title}</h3>
+              <h3 className="text-2xl font-bold text-white mb-4">
+                {step.title}
+              </h3>
 
-              <p className="text-gray-300 leading-relaxed">{step.description}</p>
+              <p className="text-gray-300 leading-relaxed">
+                {step.description}
+              </p>
             </motion.div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

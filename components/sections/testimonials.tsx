@@ -1,33 +1,36 @@
-"use client"
+"use client";
 
-import { motion, useInView } from "framer-motion"
-import { useRef, useState, useEffect } from "react"
-import { ChevronLeft, ChevronRight, Quote } from "lucide-react"
-import content from "@/lib/content.json"
+import { motion, useInView } from "framer-motion";
+import { useRef, useState, useEffect } from "react";
+import { ChevronLeft, ChevronRight, Quote } from "lucide-react";
+import content from "@/lib/content.json";
 
 export function Testimonials() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-20%" })
-  const [currentIndex, setCurrentIndex] = useState(0)
-  const [isAutoPlaying, setIsAutoPlaying] = useState(true)
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-20%" });
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
 
   useEffect(() => {
-    if (!isAutoPlaying) return
+    if (!isAutoPlaying) return;
 
     const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % content.testimonials.length)
-    }, 6000)
+      setCurrentIndex((prev) => (prev + 1) % content.testimonials.length);
+    }, 6000);
 
-    return () => clearInterval(interval)
-  }, [isAutoPlaying])
+    return () => clearInterval(interval);
+  }, [isAutoPlaying]);
 
   const nextTestimonial = () => {
-    setCurrentIndex((prev) => (prev + 1) % content.testimonials.length)
-  }
+    setCurrentIndex((prev) => (prev + 1) % content.testimonials.length);
+  };
 
   const prevTestimonial = () => {
-    setCurrentIndex((prev) => (prev - 1 + content.testimonials.length) % content.testimonials.length)
-  }
+    setCurrentIndex(
+      (prev) =>
+        (prev - 1 + content.testimonials.length) % content.testimonials.length
+    );
+  };
 
   return (
     <section
@@ -44,9 +47,16 @@ export function Testimonials() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">What Our Clients Say</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            What Our{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent underline decoration-purple-400 underline-offset-4">
+              Clients
+            </span>{" "}
+            Say
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Trusted by organizations worldwide to transform their feedback culture and drive meaningful growth.
+            Trusted by organizations worldwide to transform their feedback
+            culture and drive meaningful growth.
           </p>
         </motion.div>
 
@@ -72,7 +82,9 @@ export function Testimonials() {
                     </blockquote>
 
                     <div className="space-y-2">
-                      <div className="text-lg font-semibold text-white">{testimonial.author}</div>
+                      <div className="text-lg font-semibold text-white">
+                        {testimonial.author}
+                      </div>
                       <div className="text-purple-300">{testimonial.role}</div>
                       <div className="text-gray-400">{testimonial.company}</div>
                     </div>
@@ -112,5 +124,5 @@ export function Testimonials() {
         </div>
       </div>
     </section>
-  )
+  );
 }

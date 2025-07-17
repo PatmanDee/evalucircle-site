@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { motion, useInView } from "framer-motion"
-import { Target, Users, ClipboardList } from "lucide-react"
-import { useRef } from "react"
-import content from "@/lib/content.json"
+import { motion, useInView } from "framer-motion";
+import { Target, Users, ClipboardList } from "lucide-react";
+import { useRef } from "react";
+import content from "@/lib/content.json";
 
 const iconMap = {
   target: Target,
   users: Users,
   clipboard: ClipboardList,
-}
+};
 
 export function CoreModules() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-20%" })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-20%" });
 
   return (
     <section id="features" className="py-24 px-6" ref={ref}>
@@ -24,15 +24,21 @@ export function CoreModules() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">Core Modules</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Core{" "}
+            <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent underline decoration-purple-400 underline-offset-4">
+              Modules
+            </span>{" "}
+          </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Comprehensive evaluation tools designed to transform how your organization approaches feedback and growth.
+            Comprehensive evaluation tools designed to transform how your
+            organization approaches feedback and growth.
           </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {content.coreModules.map((module, index) => {
-            const IconComponent = iconMap[module.icon as keyof typeof iconMap]
+            const IconComponent = iconMap[module.icon as keyof typeof iconMap];
 
             return (
               <motion.div
@@ -58,13 +64,15 @@ export function CoreModules() {
                     {module.title}
                   </h3>
 
-                  <p className="text-gray-300 leading-relaxed">{module.description}</p>
+                  <p className="text-gray-300 leading-relaxed">
+                    {module.description}
+                  </p>
                 </div>
               </motion.div>
-            )
+            );
           })}
         </div>
       </div>
     </section>
-  )
+  );
 }

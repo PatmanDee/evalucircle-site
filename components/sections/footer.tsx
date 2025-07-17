@@ -13,11 +13,8 @@ export function Footer() {
           <div className="flex items-center gap-3">
             <Logo size="sm" />
             <div className="flex flex-col">
-              <span className="text-lg font-bold text-white">
+              <span className="text-lg font-bold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
                 {content.brand.name}
-              </span>
-              <span className="text-sm text-purple-300">
-                {content.brand.tagline}
               </span>
             </div>
           </div>
