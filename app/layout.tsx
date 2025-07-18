@@ -7,10 +7,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Evalucircle - Transform Feedback Into Growth",
+  title: "EvaluCircle - Transform Feedback Into Growth",
   description:
     "The complete evaluation platform that turns insights into action, helping organizations build stronger teams and better outcomes.",
-  generator: "v0.dev",
+  generator: "Patman",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

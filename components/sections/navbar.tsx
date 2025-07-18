@@ -1,22 +1,26 @@
-"use client"
+"use client";
 
-import { motion, useScroll, useTransform } from "framer-motion"
-import { Logo } from "@/components/ui/logo"
-import { ThemeToggle } from "@/components/ui/theme-toggle"
-import { AnimatedButton } from "@/components/ui/animated-button"
-import content from "@/lib/content.json"
+import { motion, useScroll, useTransform } from "framer-motion";
+import { Logo } from "@/components/ui/logo";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { AnimatedButton } from "@/components/ui/animated-button";
+import content from "@/lib/content.json";
 
 export function Navbar() {
-  const { scrollY } = useScroll()
+  const { scrollY } = useScroll();
 
-  const navBackground = useTransform(scrollY, [0, 150], ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.8)"])
+  const navBackground = useTransform(
+    scrollY,
+    [0, 150],
+    ["rgba(0, 0, 0, 0)", "rgba(0, 0, 0, 0.8)"]
+  );
 
-  const navHeight = useTransform(scrollY, [0, 150], [80, 64])
-  const logoScale = useTransform(scrollY, [0, 150], [1, 0.9])
+  const navHeight = useTransform(scrollY, [0, 150], [80, 64]);
+  const logoScale = useTransform(scrollY, [0, 150], [1, 0.9]);
 
   // Transform for centering navigation
-  const navItemsX = useTransform(scrollY, [0, 150], [0, -100])
-  const logoX = useTransform(scrollY, [0, 150], [0, 50])
+  const navItemsX = useTransform(scrollY, [0, 150], [0, -100]);
+  const logoX = useTransform(scrollY, [0, 150], [0, 50]);
 
   return (
     <motion.nav
@@ -28,7 +32,10 @@ export function Navbar() {
       }}
     >
       <div className="max-w-7xl mx-auto h-full flex items-center justify-between">
-        <motion.div className="flex items-center gap-3" style={{ scale: logoScale, x: logoX }}>
+        <motion.div
+          className="flex items-center gap-3"
+          style={{ scale: logoScale, x: logoX }}
+        >
           <Logo size="md" />
           <motion.span
             className="text-xl font-bold gradient-text"
@@ -44,7 +51,10 @@ export function Navbar() {
           </motion.span>
         </motion.div>
 
-        <motion.div className="hidden md:flex items-center gap-8" style={{ x: navItemsX }}>
+        <motion.div
+          className="hidden md:flex items-center gap-8"
+          style={{ x: navItemsX }}
+        >
           <a
             href="#features"
             className="text-gray-600 dark:text-gray-300 hover:text-purple-600 dark:hover:text-purple-400 transition-colors"
@@ -78,12 +88,11 @@ export function Navbar() {
         </motion.div>
 
         <div className="flex items-center gap-4">
-          <ThemeToggle />
           <AnimatedButton variant="secondary" className="hidden sm:flex">
             Get Started
           </AnimatedButton>
         </div>
       </div>
     </motion.nav>
-  )
+  );
 }
